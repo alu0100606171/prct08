@@ -34,6 +34,7 @@ describe Matrix do
      (@f1.transpuesta == f).should be_true;
    end
  end
+end
 #
 # describe "Operaciones con una matriz" do
 #  it "La traspuesta de la matriz se almacena correctamente" do
