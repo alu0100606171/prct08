@@ -10,7 +10,7 @@ describe Matrix do
   describe "La matriz se genera correctamente" do
 	it "La matriz tiene formato correcto" do
 	  f = Matrix.new([[1,2],[3]]).should raise_error
-	  f_2 = Matriz.new([[1,2],[3,4]]).should_not raise_error
+	  f_2 = Matrix.new([[1,2],[3,4]]).should_not raise_error
 	end
   
   describe "Almacenamiento de nº de filas y columnas" do
