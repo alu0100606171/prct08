@@ -1,4 +1,4 @@
-require "./lib/matrix_main.rb"
+require "./lib/matrix.rb"
 
 
 describe Matrix do
@@ -24,13 +24,13 @@ describe Matrix do
   
  describe "Igualdad entre matrices" do
    it "Las matrices han de ser iguales" do
-     f = Matriz.new([[1,2],[3,4],[5,6]])
+     f = Matrix.new([[1,2],[3,4],[5,6]])
      (@f1 == f).should be_true;
    end
  end
  describe "Transformacion de una matriz" do
    it "Matriz transpuesta" do
-     f = Matriz.new([[1,3,5],[2,4,6]])
+     f = Matrix.new([[1,3,5],[2,4,6]])
      (@f1.transpuesta == f).should be_true;
    end
  end
