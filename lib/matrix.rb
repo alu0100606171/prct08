@@ -13,4 +13,37 @@ class Matrix
                     raise ArgumentError, 'Los elementos pasados no se corresponden con una matriz' unless @elementos[i].length == @columnas
             end
     end
+
+    #Función para acceder al elemento i, j
+   def at(i, j)
+      @elementos[i][j]
+   end
+   
+   #Sobrecarga del operador ==
+   def == (other)
+      iguales = true
+      @filas.times do |i|
+         @columnas.times do |j|
+            if @elementos[i][j] != other.at(i,j)
+               iguales = false
+            end
+         end
+      end
+      
+      return iguales
+   end
+   
+   #Función para el cálculo de la traspuesta
+   def traspuesta
+      elem = Array.new
+      @columnas.times do |i|
+         fila = Array.new
+         @filas.times do |j|
+            fila << @elementos[j][i]
+         end
+         elem << fila
+      end
+      Matrix.new(elem)
+   end
+
 end
