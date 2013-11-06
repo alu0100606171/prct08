@@ -49,13 +49,13 @@ class Matrix
 #Sobrecarga del operador de suma
    def +(other)
       raise ArgumentError, "Las dimensiones de las matrices no coinciden" unless @filas == other.filas && @columnas == other.columnas
-      new_mat = Array.new
+      elem = Array.new
       @filas.times do |i|
          fila = Array.new
          @columnas.times do |j|
             fila << @elementos[i][j] + other.at(i, j)
          end
-         new_mat << fila
+         elem << fila
       end
       Matrix.new(elem)
    end

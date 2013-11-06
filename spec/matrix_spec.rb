@@ -39,8 +39,8 @@ end
 
   describe "Operaciones con dos matrices" do
     it "La suma de matrices se realiza correctamente" do
-      f = Matrix.new([[1,1],[2,2],[3,3]])
-      (@f1 + f).should eq (Matrix.new([[2,3],[5,6],[8,9]]))
+      f = Matrix.new([[1,1],[2,2]])
+      (@f1 + f).should eq (Matrix.new([[2,3],[5,6]]))
     end
   end
 
