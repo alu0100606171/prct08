@@ -25,10 +25,10 @@ describe Matrix do
   
  describe "Igualdad entre matrices" do
   it "Las matrices han de ser iguales" do
-    f = Matrix.new([[1,2],[3,4],[5,6]])
+    f = Matrix.new([[1,2],[3,4]])
     (@f1 == f).should be_true
   end
-end
+ end
 
  describe "Transformacion de una matriz" do
   it "Matriz traspuesta" do
